@@ -1,18 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#261D3D"/>
-      <stop offset="50%" stop-color="#1A142B"/>
-      <stop offset="100%" stop-color="#120E1F"/>
+    <linearGradient id="pastelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF0F5"/>
+      <stop offset="50%" stop-color="#F4E3EC"/>
+      <stop offset="100%" stop-color="#CFC2E5"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#C084FC" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
-    </radialGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
-  <circle cx="200" cy="200" r="180" fill="url(#glow)"/>
-  <circle cx="200" cy="200" r="160" fill="none" stroke="#C084FC" stroke-width="4" stroke-dasharray="10 6"/>
-  <circle cx="200" cy="200" r="140" fill="none" stroke="#E9D5FF" stroke-width="2"/>
-  <text x="200" y="240" font-family="'Cinzel', Georgia, serif" font-size="140" font-weight="bold" fill="#E9D5FF" text-anchor="middle">C</text>
+  <rect width="100%" height="100%" fill="url(#pastelBg)"/>
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#3B1A60" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="200" y="240" font-family="'Outfit', 'Georgia', serif" font-size="140" font-weight="bold" fill="#180B2B" text-anchor="middle">C</text>
 </svg>
