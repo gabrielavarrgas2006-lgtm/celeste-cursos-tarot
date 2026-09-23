@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <!-- Script de Restauración de Scroll en el Tope (Garantiza que la página abra arriba de todo) -->
+    <!-- Script de Restauración de Scroll en el Tope (Abre siempre en el encabezado principal) -->
     <script>
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
@@ -29,7 +29,7 @@
     <meta property="og:description" content="Espacio de autoconocimiento, transformación y reflexión. Cursos, talleres y acompañamiento holístico de Tarot.">
     <meta property="og:site_name" content="Celeste Universo Consciente">
 
-    <!-- SVG Favicon con Foto / Símbolo místico -->
+    <!-- SVG Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FDF0F6' stroke='%23370F4D' stroke-width='4'/><text x='50' y='64' font-family='Outfit, sans-serif' font-size='52' font-weight='bold' fill='%23370F4D' text-anchor='middle'>C</text></svg>">
 
     <!-- Google Fonts: Outfit (Titulares) & Plus Jakarta Sans (Cuerpo) -->
@@ -74,7 +74,21 @@
             --plum-texto: #2D103F;
         }
 
-        /* PALETA DE COLORES PASTEL LILA Y ROSA FRESCA Y HERMOSA */
+        /* REGLAS ANTI-OVERFLOW HORIZONTAL PARA CELULARES (IMPIDE QUE SE MUEVA A LOS LADOS) */
+        html, body {
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+        }
+
+        *, *:before, *:after {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -84,14 +98,13 @@
             background: linear-gradient(135deg, #F3E8FA 0%, #E8D4F5 35%, #DDC0F0 70%, #D0ABE8 100%);
             background-attachment: fixed;
             color: #2D103F;
-            overflow-x: hidden;
             font-weight: 600;
         }
 
-        /* TIPOGRAFÍA Y LEGIBILIDAD (CONTRASATADO Y NÍTIDO EN MORADO OSCURO) */
+        /* TIPOGRAFÍA Y LEGIBILIDAD (CONTRASATADO NÍTIDO MORADO OSCURO - SIN BLANCO) */
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Outfit', sans-serif;
-            color: #370F4D;
+            color: #370F4D !important;
             font-weight: 800;
         }
 
@@ -129,12 +142,12 @@
             box-shadow: 0 8px 20px rgba(55, 15, 77, 0.1);
         }
 
-        /* ETIQUETAS Y BADGES CON TEXTO MORADO OSCURO 100% LEGIBLE (NADA DE BLANCO) */
+        /* ETIQUETAS Y BADGES CON TEXTO MORADO OSCURO 100% VISIBLE (CERO LETRAS BLANCAS) */
         .cute-pastel-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.55rem 1.1rem;
+            gap: 0.4rem;
+            padding: 0.45rem 1rem;
             border-radius: 0.85rem;
             background: linear-gradient(135deg, #FDF0F6 0%, #F4E2EF 50%, #E6D4F5 100%);
             border: 1.5px solid #F0CDE2;
@@ -142,8 +155,8 @@
             font-weight: 800 !important;
             font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            box-shadow: 0 4px 14px rgba(55, 15, 77, 0.08);
+            letter-spacing: 0.04em;
+            box-shadow: 0 3px 10px rgba(55, 15, 77, 0.08);
         }
 
         .cute-pastel-badge * {
@@ -152,9 +165,9 @@
         }
 
         .cute-pastel-icon {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 1rem;
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 0.85rem;
             background: linear-gradient(135deg, #FDF0F6 0%, #F8E2EE 50%, #E6D7F4 100%);
             border: 1.5px solid #FFFFFF;
             display: inline-flex;
@@ -162,70 +175,36 @@
             justify-content: center;
             color: #370F4D;
             box-shadow: 0 4px 12px rgba(55, 15, 77, 0.1);
-            font-size: 1.25rem;
+            font-size: 1.15rem;
         }
 
-        /* LOGO ARRIBA CON LA FOTO EN CÍRCULO PERFECTO (SIN CUADRADOS NI BORDES OSCUROS) */
-        .brand-c-logo {
-            width: 2.85rem;
-            height: 2.85rem;
-            min-width: 2.85rem;
-            min-height: 2.85rem;
+        /* FOTO DEL ÁRBOL DE LA VIDA EN CÍRCULOS PERFECTOS (RECORTA 100% DE BORDES NEGROS) */
+        .circle-avatar-tree {
             border-radius: 50% !important;
-            border: 2px solid #FFFFFF;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(55, 15, 77, 0.14);
+            overflow: hidden !important;
             background: #FDF0F6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 0 !important;
-            margin: 0;
+            display: block !important;
         }
 
-        .brand-c-logo img {
+        .circle-avatar-tree img {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
             object-position: center !important;
-            transform: scale(1.16) !important;
+            transform: scale(1.18) !important; /* Zoom para eliminar las esquinas negras exteriores */
             border-radius: 50% !important;
             display: block !important;
         }
 
-        .brand-c-hero {
-            width: 4.75rem;
-            height: 4.75rem;
-            min-width: 4.75rem;
-            min-height: 4.75rem;
-            border-radius: 50% !important;
-            border: 2.5px solid #FFFFFF;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(55, 15, 77, 0.18);
-            background: #FDF0F6;
-            margin: 0 auto 1rem auto;
-            display: block;
-            padding: 0 !important;
-        }
-
-        .brand-c-hero img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            object-position: center !important;
-            transform: scale(1.16) !important;
-            border-radius: 50% !important;
-            display: block !important;
-        }
-
-        /* FOTO DE PERFIL CIRCULAR EN ACOMPAÑAMIENTO HOLÍSTICO */
+        /* FOTO DE PERFIL PRINCIPAL EN ACOMPAÑAMIENTO HOLÍSTICO */
         .profile-photo-circle {
-            width: 200px;
-            height: 200px;
-            min-width: 200px;
-            min-height: 200px;
-            max-width: 200px;
-            max-height: 200px;
+            width: 180px;
+            height: 180px;
+            min-width: 180px;
+            min-height: 180px;
+            max-width: 180px;
+            max-height: 180px;
             border-radius: 50%;
             border: 4px solid #FFFFFF;
             box-shadow: 0 10px 30px rgba(55, 15, 77, 0.2), 0 0 20px rgba(235, 218, 244, 0.6);
@@ -242,7 +221,7 @@
             height: 100% !important;
             object-fit: cover !important;
             object-position: center !important;
-            transform: scale(1.16) !important;
+            transform: scale(1.18) !important;
             border-radius: 50% !important;
             display: block !important;
         }
@@ -279,7 +258,6 @@
             transform: translateY(-1px);
         }
 
-        /* OPCIONES DE SELECT NÍTIDAS */
         option {
             background-color: #FDF0F6;
             color: #370F4D;
@@ -289,20 +267,21 @@
 </head>
 <body class="selection:bg-[#DDC0F0] selection:text-[#370F4D]">
 
-    <!-- NAVIGATION BAR -->
+    <!-- NAVIGATION BAR (Fixed, Responsive, No Overflow) -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#F3E8FA]/95 border-b border-[#F0CDE2] shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-3 group">
-                <div class="brand-c-logo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2.5 sm:space-x-3 group">
+                <!-- LOGO REDONDO CON LA FOTO DEL ÁRBOL DE LA VIDA (SIN NEGRO NI BORDES CUADRADOS) -->
+                <div class="w-10 h-10 sm:w-11 sm:h-11 circle-avatar-tree border-2 border-white shadow-md flex-shrink-0">
                     <img src="images/celeste-profile.jpg" alt="Celeste Logo" loading="eager">
                 </div>
                 <div>
-                    <span class="font-heading text-lg font-bold tracking-wider text-[#370F4D] block leading-tight">CELESTE</span>
-                    <span class="text-[10px] uppercase tracking-widest text-[#2D103F] font-bold block">Universo Consciente</span>
+                    <span class="font-heading text-base sm:text-lg font-extrabold tracking-wider text-[#370F4D] block leading-tight">CELESTE</span>
+                    <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-[#2D103F] font-bold block">Universo Consciente</span>
                 </div>
             </a>
             
-            <div class="hidden md:flex items-center space-x-8 text-sm font-bold text-[#2D103F]">
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-bold text-[#2D103F]">
                 <a href="#nosotros" class="hover:text-[#370F4D] transition-colors">Celeste</a>
                 <a href="#metodo" class="hover:text-[#370F4D] transition-colors">Método</a>
                 <a href="#cursos" class="hover:text-[#370F4D] transition-colors">Cursos</a>
@@ -311,7 +290,7 @@
             </div>
 
             <div class="hidden sm:block">
-                <a href="#pagos" class="px-6 py-2.5 btn-mystic-primary text-sm inline-block">
+                <a href="#pagos" class="px-5 py-2 sm:px-6 sm:py-2.5 btn-mystic-primary text-xs sm:text-sm inline-block">
                     Inscripción
                 </a>
             </div>
@@ -331,54 +310,55 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION WITH BRAND PHOTO -->
-    <header class="pt-32 pb-14 md:pt-40 md:pb-20 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+    <!-- HERO SECTION (Calibrado para Celulares sin Desbordamiento) -->
+    <header class="pt-28 pb-10 sm:pt-36 sm:pb-16 md:pt-40 md:pb-20 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
                 
-                <!-- Cute Pastel Badge con texto morado oscuro 100% visible -->
-                <div class="cute-pastel-badge inline-flex">
-                    <i class="fa-solid fa-sparkles text-xs"></i>
-                    <span>Espacio de autoconocimiento, transformación y reflexión</span>
+                <!-- Cute Pastel Badge con texto Morado Oscuro 100% visible -->
+                <div class="cute-pastel-badge inline-flex max-w-full">
+                    <i class="fa-solid fa-sparkles text-xs flex-shrink-0"></i>
+                    <span class="truncate sm:whitespace-normal">Espacio de autoconocimiento, transformación y reflexión</span>
                 </div>
 
-                <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-[#370F4D] leading-tight">
+                <h1 class="font-heading text-2xl sm:text-4xl lg:text-6xl font-extrabold text-[#370F4D] leading-tight">
                     CELESTE <br class="hidden sm:inline" /><span class="text-[#2D103F]">UNIVERSO CONSCIENTE</span>
                 </h1>
 
-                <p class="text-base sm:text-lg text-[#2D103F] font-bold max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                <p class="text-sm sm:text-base lg:text-lg text-[#2D103F] font-bold max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                     Formaciones y talleres de Tarot evolutivo y predictivo. Aprendé a comprender el lenguaje sagrado de los arcanos a través de su simbología, elementos y relaciones.
                 </p>
 
-                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                    <a href="#cursos" class="w-full sm:w-auto px-8 py-4 btn-mystic-primary text-center">
+                <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                    <a href="#cursos" class="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 btn-mystic-primary text-center text-sm">
                         Ver Cursos y Talleres
                     </a>
-                    <a href="#nosotros" class="w-full sm:w-auto px-8 py-4 btn-mystic-secondary text-center">
+                    <a href="#nosotros" class="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 btn-mystic-secondary text-center text-sm">
                         Conocé la Propuesta
                     </a>
                 </div>
             </div>
 
-            <!-- Arcane Presentation Card con Foto del Árbol de la Vida -->
+            <!-- Arcane Presentation Card con Foto del Árbol de la Vida Cicular -->
             <div class="lg:col-span-5 flex justify-center">
-                <div class="w-full max-w-sm panel-card p-8 flex flex-col justify-between h-[420px] text-center relative overflow-hidden">
+                <div class="w-full max-w-[320px] sm:max-w-sm panel-card p-6 sm:p-8 flex flex-col justify-between h-[390px] sm:h-[420px] text-center relative overflow-hidden">
                     <div class="flex justify-between items-center w-full">
-                        <span class="text-[11px] uppercase tracking-widest text-[#370F4D] font-bold">Arcano Mayor</span>
+                        <span class="text-[11px] uppercase tracking-widest text-[#370F4D] font-extrabold">Arcano Mayor</span>
                         <div class="cute-pastel-icon !w-8 !h-8 !text-xs">
                             <i class="fa-solid fa-moon"></i>
                         </div>
                     </div>
 
-                    <div class="my-auto py-4">
-                        <div class="brand-c-hero">
+                    <div class="my-auto py-3 sm:py-4">
+                        <!-- LOGO HERO CÍRCULO CON ÁRBOL DE LA VIDA -->
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 circle-avatar-tree border-2 sm:border-3 border-white shadow-lg mx-auto mb-3">
                             <img src="images/celeste-profile.jpg" alt="Celeste Tree of Life" loading="eager">
                         </div>
-                        <h3 class="font-heading text-2xl font-bold text-[#370F4D] tracking-wide mt-2">La Sacerdotisa</h3>
+                        <h3 class="font-heading text-xl sm:text-2xl font-bold text-[#370F4D] tracking-wide mt-2">La Sacerdotisa</h3>
                         <p class="text-xs text-[#2D103F] font-bold mt-1">Intuición, Sabiduría y Simbología</p>
                     </div>
 
-                    <div class="border-t border-[#F0CDE2] pt-4">
+                    <div class="border-t border-[#F0CDE2] pt-3 sm:pt-4">
                         <p class="text-xs text-[#2D103F] font-bold tracking-wide">Desarrollá tu propia voz interpretativa</p>
                     </div>
                 </div>
@@ -387,9 +367,9 @@
     </header>
 
     <!-- SECTION: CELESTE - ACOMPAÑAMIENTO HOLÍSTICO -->
-    <section id="nosotros" class="py-16 max-w-7xl mx-auto px-6">
+    <section id="nosotros" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="max-w-5xl mx-auto">
-            <div class="panel-card p-8 sm:p-12 relative overflow-hidden text-center sm:text-left">
+            <div class="panel-card p-6 sm:p-12 relative overflow-hidden text-center sm:text-left">
                 
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     
@@ -419,15 +399,15 @@
                             Un espacio creado para brindarte herramientas de autoconocimiento, reflexión y transformación profunda a través de la sabiduría del Tarot y el enfoque holístico.
                         </p>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs font-bold text-[#2D103F]">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2 text-xs font-bold text-[#2D103F]">
                             <div class="flex items-center space-x-3 bg-[#FDF0F6] p-3 rounded-xl border border-[#F0CDE2] shadow-sm">
-                                <div class="cute-pastel-icon !w-8 !h-8 !text-xs">
+                                <div class="cute-pastel-icon !w-8 !h-8 !text-xs flex-shrink-0">
                                     <i class="fa-solid fa-heart"></i>
                                 </div>
                                 <span class="font-bold text-[#370F4D]">Mirada evolutiva y humana</span>
                             </div>
                             <div class="flex items-center space-x-3 bg-[#FDF0F6] p-3 rounded-xl border border-[#F0CDE2] shadow-sm">
-                                <div class="cute-pastel-icon !w-8 !h-8 !text-xs">
+                                <div class="cute-pastel-icon !w-8 !h-8 !text-xs flex-shrink-0">
                                     <i class="fa-solid fa-feather"></i>
                                 </div>
                                 <span class="font-bold text-[#370F4D]">Espacio seguro y empático</span>
@@ -442,47 +422,47 @@
     </section>
 
     <!-- METODOLOGIA SECTION -->
-    <section id="metodo" class="py-16 max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+    <section id="metodo" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-14">
             <span class="cute-pastel-badge">Enfoque Pedagógico</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#370F4D]">Más que memorizar significados</h2>
+            <h2 class="font-heading text-2xl sm:text-4xl font-bold text-[#370F4D]">Más que memorizar significados</h2>
             <div class="w-16 h-1 bg-[#370F4D] mx-auto rounded-full"></div>
-            <p class="text-[#2D103F] text-base font-bold leading-relaxed">
+            <p class="text-[#2D103F] text-sm sm:text-base font-bold leading-relaxed">
                 La propuesta es aprender a comprender el Tarot a través de su simbología, sus elementos y la relación entre las cartas para que logres tu propia voz interpretativa.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="panel-card p-8 flex flex-col justify-between">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div class="panel-card p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                    <div class="cute-pastel-icon mb-6">
+                    <div class="cute-pastel-icon mb-5 sm:mb-6">
                         <i class="fa-solid fa-compass-drafting"></i>
                     </div>
-                    <h3 class="font-heading text-xl font-bold text-[#370F4D] mb-3">Simbología y Estructura</h3>
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-[#370F4D] mb-2 sm:mb-3">Simbología y Estructura</h3>
                     <p class="text-[#2D103F] text-sm font-bold leading-relaxed">
                         Conectá con la raíz de cada arcano comprendiendo su lenguaje visual, sus elementos y la interacción profunda en cada tirada.
                     </p>
                 </div>
             </div>
 
-            <div class="panel-card p-8 flex flex-col justify-between">
+            <div class="panel-card p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                    <div class="cute-pastel-icon mb-6">
+                    <div class="cute-pastel-icon mb-5 sm:mb-6">
                         <i class="fa-solid fa-signs-post"></i>
                     </div>
-                    <h3 class="font-heading text-xl font-bold text-[#370F4D] mb-3">Observación de Procesos</h3>
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-[#370F4D] mb-2 sm:mb-3">Observación de Procesos</h3>
                     <p class="text-[#2D103F] text-sm font-bold leading-relaxed">
                         No solo respondemos qué va a pasar. Utilizamos el Tarot para observar diferentes perspectivas, comprender procesos y reconocer patrones vitales.
                     </p>
                 </div>
             </div>
 
-            <div class="panel-card p-8 flex flex-col justify-between">
+            <div class="panel-card p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                    <div class="cute-pastel-icon mb-6">
+                    <div class="cute-pastel-icon mb-5 sm:mb-6">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="font-heading text-xl font-bold text-[#370F4D] mb-3">Práctica y Seguridad</h3>
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-[#370F4D] mb-2 sm:mb-3">Práctica y Seguridad</h3>
                     <p class="text-[#2D103F] text-sm font-bold leading-relaxed">
                         Un espacio pensado tanto para principiantes absolutos como para quienes buscan ordenar, reforzar y elevar la calidad de sus lecturas.
                     </p>
@@ -492,31 +472,31 @@
     </section>
 
     <!-- CURSO DE TAROT SECTION -->
-    <section id="cursos" class="py-16 max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+    <section id="cursos" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-14">
             <span class="cute-pastel-badge">Formación Completa</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#370F4D]">Curso de Tarot</h2>
+            <h2 class="font-heading text-2xl sm:text-4xl font-bold text-[#370F4D]">Curso de Tarot</h2>
             <div class="w-16 h-1 bg-[#370F4D] mx-auto rounded-full"></div>
-            <p class="text-[#2D103F] text-base font-bold">
-                Duración total: <span class="text-[#370F4D] font-bold">3 meses</span>. Dos modalidades adaptadas a tus tiempos y objetivos.
+            <p class="text-[#2D103F] text-sm sm:text-base font-bold">
+                Duración total: <span class="text-[#370F4D] font-extrabold">3 meses</span>. Dos modalidades adaptadas a tus tiempos y objetivos.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
             <!-- Modalidad 1: Grabada -->
-            <div class="panel-card p-8 sm:p-10 flex flex-col justify-between">
+            <div class="panel-card p-6 sm:p-10 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-center mb-6">
-                        <span class="cute-pastel-badge">A tu ritmo</span>
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-extrabold text-xs uppercase tracking-wider shadow-sm">A tu ritmo</span>
                         <div class="cute-pastel-icon !w-9 !h-9 !text-sm">
                             <i class="fa-solid fa-video"></i>
                         </div>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold text-[#370F4D] mb-3">Modalidad 100% Grabada</h3>
+                    <h3 class="font-heading text-xl sm:text-2xl font-bold text-[#370F4D] mb-3">Modalidad 100% Grabada</h3>
                     <p class="text-[#2D103F] text-sm font-bold mb-6 leading-relaxed">
                         Accedés al contenido completo para estudiar a tu tiempo y a tu ritmo, con acompañamiento personalizado.
                     </p>
-                    <ul class="space-y-4 text-sm text-[#2D103F] font-bold mb-8">
+                    <ul class="space-y-3.5 text-sm text-[#2D103F] font-bold mb-8">
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#370F4D] mr-3 mt-1 font-bold"></i>
                             <span>Acceso ilimitado al contenido teórico y práctico.</span>
@@ -534,20 +514,23 @@
                 </div>
             </div>
 
-            <!-- Modalidad 2: Personalizada -->
-            <div class="panel-card p-8 sm:p-10 flex flex-col justify-between border-2 !border-[#370F4D]">
+            <!-- Modalidad 2: Personalizada (ETIQUETA EXCLUSIVO EN VIVO EN MORADO OSCURO 100% NÍTIDO) -->
+            <div class="panel-card p-6 sm:p-10 flex flex-col justify-between border-2 !border-[#370F4D]">
                 <div>
                     <div class="flex justify-between items-center mb-6">
-                        <span class="cute-pastel-badge">Exclusivo en vivo</span>
+                        <!-- ETIQUETA MORADO OSCURO 100% VISIBLE SIN BLANCO -->
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-extrabold text-xs uppercase tracking-wider shadow-sm">
+                            Exclusivo en vivo
+                        </span>
                         <div class="cute-pastel-icon !w-9 !h-9 !text-sm">
                             <i class="fa-solid fa-user-gear"></i>
                         </div>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold text-[#370F4D] mb-3">Modalidad 100% Personalizada</h3>
+                    <h3 class="font-heading text-xl sm:text-2xl font-bold text-[#370F4D] mb-3">Modalidad 100% Personalizada</h3>
                     <p class="text-[#2D103F] text-sm font-bold mb-6 leading-relaxed">
                         Clases individuales en vivo, totalmente adaptadas a tu nivel actual y a tus necesidades específicas.
                     </p>
-                    <ul class="space-y-4 text-sm text-[#2D103F] font-bold mb-8">
+                    <ul class="space-y-3.5 text-sm text-[#2D103F] font-bold mb-8">
                         <li class="flex items-start">
                             <i class="fa-solid fa-check text-[#370F4D] mr-3 mt-1 font-bold"></i>
                             <span>Encuentros individuales con seguimiento directo.</span>
@@ -568,26 +551,26 @@
     </section>
 
     <!-- TALLERES DE TAROT SECTION -->
-    <section id="talleres" class="py-16 max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+    <section id="talleres" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-14">
             <span class="cute-pastel-badge">Especialización Puntual</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#370F4D]">Talleres de Tarot</h2>
+            <h2 class="font-heading text-2xl sm:text-4xl font-bold text-[#370F4D]">Talleres de Tarot</h2>
             <div class="w-16 h-1 bg-[#370F4D] mx-auto rounded-full"></div>
-            <p class="text-[#2D103F] text-base font-bold">
+            <p class="text-[#2D103F] text-sm sm:text-base font-bold">
                 Clases 100% personalizadas para trabajar aquello que necesitás reforzar o profundizar.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto mb-10 sm:mb-12">
             <!-- Nivel 1 -->
-            <div class="panel-card p-8">
+            <div class="panel-card p-6 sm:p-8">
                 <div class="flex justify-between items-center mb-6">
-                    <span class="cute-pastel-badge">Nivel 1</span>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-extrabold text-xs uppercase tracking-wider shadow-sm">Nivel 1</span>
                     <div class="cute-pastel-icon !w-8 !h-8 !text-xs">
                         <i class="fa-solid fa-seedling"></i>
                     </div>
                 </div>
-                <h3 class="font-heading text-2xl font-bold text-[#370F4D] mb-3">Nivel Inicial</h3>
+                <h3 class="font-heading text-xl sm:text-2xl font-bold text-[#370F4D] mb-3">Nivel Inicial</h3>
                 <p class="text-[#2D103F] text-sm font-bold leading-relaxed mb-6">
                     Para quienes están comenzando a aprender Tarot y necesitan incorporar y ordenar las bases: estructura, arcanos, simbología, interpretación inicial y práctica.
                 </p>
@@ -597,14 +580,14 @@
             </div>
 
             <!-- Nivel 2 -->
-            <div class="panel-card p-8">
+            <div class="panel-card p-6 sm:p-8">
                 <div class="flex justify-between items-center mb-6">
-                    <span class="cute-pastel-badge">Nivel 2</span>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-extrabold text-xs uppercase tracking-wider shadow-sm">Nivel 2</span>
                     <div class="cute-pastel-icon !w-8 !h-8 !text-xs">
                         <i class="fa-solid fa-fire"></i>
                     </div>
                 </div>
-                <h3 class="font-heading text-2xl font-bold text-[#370F4D] mb-3">Nivel Avanzado</h3>
+                <h3 class="font-heading text-xl sm:text-2xl font-bold text-[#370F4D] mb-3">Nivel Avanzado</h3>
                 <p class="text-[#2D103F] text-sm font-bold leading-relaxed mb-6">
                     Para quienes ya tienen conocimientos y buscan profundizar la interpretación, combinar cartas, mejorar sus lecturas y ganar mayor seguridad al interpretar una tirada.
                 </p>
@@ -615,16 +598,16 @@
         </div>
 
         <!-- Packs de Clases -->
-        <div class="max-w-4xl mx-auto panel-card p-8 sm:p-10 text-center border-2 border-[#F0CDE2]">
-            <h3 class="font-heading text-2xl font-bold text-[#370F4D] mb-3">Packs de Clases Modulares</h3>
+        <div class="max-w-4xl mx-auto panel-card p-6 sm:p-10 text-center border-2 border-[#F0CDE2]">
+            <h3 class="font-heading text-xl sm:text-2xl font-bold text-[#370F4D] mb-3">Packs de Clases Modulares</h3>
             <p class="text-[#2D103F] text-sm font-bold max-w-xl mx-auto mb-6">
                 Clases individuales y personalizadas según tus objetivos específicos:
             </p>
-            <div class="flex flex-wrap justify-center gap-4 mb-8">
-                <div class="px-6 py-3 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-bold text-sm shadow-sm">
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
+                <div class="px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-bold text-xs sm:text-sm shadow-sm">
                     Pack de 3 clases
                 </div>
-                <div class="px-6 py-3 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-bold text-sm shadow-sm">
+                <div class="px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-bold text-xs sm:text-sm shadow-sm">
                     Pack de 5 clases
                 </div>
             </div>
@@ -635,27 +618,27 @@
     </section>
 
     <!-- QUOTE BANNER -->
-    <section class="py-14 text-center max-w-4xl mx-auto px-6">
+    <section class="py-12 sm:py-14 text-center max-w-4xl mx-auto px-4 sm:px-6">
         <div class="cute-pastel-icon !w-10 !h-10 mb-4 mx-auto">
             <i class="fa-solid fa-quote-left text-sm"></i>
         </div>
-        <h3 class="font-heading text-2xl sm:text-3xl font-bold text-[#370F4D] leading-relaxed mb-4">
+        <h3 class="font-heading text-xl sm:text-3xl font-bold text-[#370F4D] leading-relaxed mb-4">
             "Aprender Tarot no es memorizar cartas. Es aprender a observar, relacionar, interpretar y desarrollar tu propia mirada."
         </h3>
         <div class="w-16 h-1 bg-[#370F4D] mx-auto rounded-full"></div>
     </section>
 
     <!-- ELITE PAYMENT & CONSULTATION SECTION -->
-    <section id="pagos" class="py-16 max-w-7xl mx-auto px-6">
+    <section id="pagos" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="max-w-4xl mx-auto">
-            <div class="panel-card p-8 sm:p-12 border-2 border-[#F0CDE2] relative overflow-hidden">
+            <div class="panel-card p-6 sm:p-12 border-2 border-[#F0CDE2] relative overflow-hidden">
                 
-                <div class="text-center max-w-2xl mx-auto space-y-4 mb-12">
+                <div class="text-center max-w-2xl mx-auto space-y-4 mb-10 sm:mb-12">
                     <div class="cute-pastel-badge inline-flex">
                         <i class="fa-solid fa-shield-halved"></i>
                         <span>Admisión y Pagos Seguros</span>
                     </div>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#370F4D]">Inversión y Medios de Pago</h2>
+                    <h2 class="font-heading text-2xl sm:text-4xl font-bold text-[#370F4D]">Inversión y Medios de Pago</h2>
                     <div class="w-16 h-1 bg-[#370F4D] mx-auto rounded-full"></div>
                     <p class="text-[#2D103F] text-sm font-bold leading-relaxed">
                         Gestionamos las inscripciones de forma personalizada para garantizarte el cupo y ofrecerte las facilidades de pago adaptadas a tu país de residencia.
@@ -663,7 +646,7 @@
                 </div>
 
                 <!-- Payment Method Overview Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 sm:mb-10">
                     <div class="payment-method-card rounded-2xl p-5 text-center">
                         <div class="cute-pastel-icon mb-3">
                             <i class="fa-solid fa-building-columns"></i>
@@ -690,21 +673,21 @@
                 </div>
 
                 <!-- Interactive Consultation Form -->
-                <div class="bg-[#FDF0F6]/95 border border-[#F0CDE2] rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
-                    <div class="border-b border-[#F0CDE2] pb-4">
-                        <h3 class="font-heading text-lg font-bold text-[#370F4D]">Solicitar Presupuesto y Link de Pago</h3>
+                <div class="bg-[#FDF0F6]/95 border border-[#F0CDE2] rounded-2xl p-5 sm:p-8 space-y-5 sm:space-y-6 shadow-sm">
+                    <div class="border-b border-[#F0CDE2] pb-3 sm:pb-4">
+                        <h3 class="font-heading text-base sm:text-lg font-bold text-[#370F4D]">Solicitar Presupuesto y Link de Pago</h3>
                         <p class="text-xs text-[#2D103F] font-bold mt-1">Completá el formulario para recibir atención inmediata de nuestro equipo vía WhatsApp.</p>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         <div>
                             <label class="block text-xs uppercase tracking-wider text-[#370F4D] font-bold mb-2">Tu Nombre Completo</label>
-                            <input type="text" id="user-name" placeholder="Ej. Valeria Gómez" class="w-full bg-[#FAF0F7] border border-[#F0CDE2] rounded-xl px-4 py-3.5 text-[#370F4D] font-bold placeholder-[#2D103F]/50 text-sm focus:outline-none focus:border-[#370F4D] transition-colors">
+                            <input type="text" id="user-name" placeholder="Ej. Valeria Gómez" class="w-full bg-[#FAF0F7] border border-[#F0CDE2] rounded-xl px-4 py-3 text-[#370F4D] font-bold placeholder-[#2D103F]/50 text-sm focus:outline-none focus:border-[#370F4D] transition-colors">
                         </div>
 
                         <div>
                             <label class="block text-xs uppercase tracking-wider text-[#370F4D] font-bold mb-2">Propuesta de Interés</label>
-                            <select id="interest-option" class="w-full bg-[#FAF0F7] border border-[#F0CDE2] rounded-xl px-4 py-3.5 text-[#370F4D] font-bold text-sm focus:outline-none focus:border-[#370F4D] transition-colors">
+                            <select id="interest-option" class="w-full bg-[#FAF0F7] border border-[#F0CDE2] rounded-xl px-4 py-3 text-[#370F4D] font-bold text-sm focus:outline-none focus:border-[#370F4D] transition-colors">
                                 <option value="Curso de Tarot - Modalidad 100% Grabada">Curso de Tarot — Modalidad 100% Grabada</option>
                                 <option value="Curso de Tarot - Modalidad 100% Personalizada">Curso de Tarot — Modalidad 100% Personalizada</option>
                                 <option value="Taller de Tarot - Nivel 1 (Inicial)">Taller de Tarot — Nivel 1 (Inicial)</option>
@@ -718,15 +701,15 @@
 
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-[#370F4D] font-bold mb-2">Comentarios o Preguntas (Opcional)</label>
-                        <textarea id="user-message" rows="3" placeholder="Hola, me gustaría recibir información sobre aranceles y medios de pago..." class="w-full bg-[#FAF0F7] border border-[#F0CDE2] rounded-xl px-4 py-3.5 text-[#370F4D] font-bold placeholder-[#2D103F]/50 text-sm focus:outline-none focus:border-[#370F4D] transition-colors"></textarea>
+                        <textarea id="user-message" rows="3" placeholder="Hola, me gustaría recibir información sobre aranceles y medios de pago..." class="w-full bg-[#FAF0F7] border border-[#F0CDE2] rounded-xl px-4 py-3 text-[#370F4D] font-bold placeholder-[#2D103F]/50 text-sm focus:outline-none focus:border-[#370F4D] transition-colors"></textarea>
                     </div>
 
-                    <div class="pt-3">
-                        <button id="whatsapp-btn" type="button" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#25D366] to-[#1EAE53] hover:from-[#20ba59] hover:to-[#199947] text-white font-heading font-extrabold text-base flex items-center justify-center space-x-3 transition-all shadow-lg hover:shadow-green-500/30 cursor-pointer active:scale-[0.99]">
-                            <i class="fa-brands fa-whatsapp text-2xl flex-shrink-0"></i>
+                    <div class="pt-2 sm:pt-3">
+                        <button id="whatsapp-btn" type="button" class="w-full py-3.5 sm:py-4 px-6 rounded-2xl bg-gradient-to-r from-[#25D366] to-[#1EAE53] hover:from-[#20ba59] hover:to-[#199947] text-white font-heading font-extrabold text-sm sm:text-base flex items-center justify-center space-x-3 transition-all shadow-lg hover:shadow-green-500/30 cursor-pointer active:scale-[0.99]">
+                            <i class="fa-brands fa-whatsapp text-xl sm:text-2xl flex-shrink-0"></i>
                             <span class="tracking-wide">Consultar por WhatsApp</span>
                         </button>
-                        <p class="text-center text-xs text-[#2D103F] font-bold mt-3.5 flex items-center justify-center gap-1.5">
+                        <p class="text-center text-xs text-[#2D103F] font-bold mt-3 flex items-center justify-center gap-1.5">
                             <i class="fa-solid fa-lock text-[#370F4D]"></i>
                             <span>Atención confidencial y asesoramiento personalizado</span>
                         </p>
@@ -742,15 +725,15 @@
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Contactar por WhatsApp" 
-       class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-[#25D366] to-[#1EAE53] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 transition-transform border-2 border-white">
+       class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-[#25D366] to-[#1EAE53] text-white flex items-center justify-center text-2xl sm:text-3xl shadow-xl hover:scale-110 transition-transform border-2 border-white">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <!-- FOOTER -->
-    <footer class="bg-[#F3E8FA] border-t border-[#F0CDE2] py-12 text-center text-[#2D103F] text-xs font-bold shadow-inner">
-        <div class="max-w-7xl mx-auto px-6 space-y-4">
+    <footer class="bg-[#F3E8FA] border-t border-[#F0CDE2] py-10 sm:py-12 text-center text-[#2D103F] text-xs font-bold shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-4">
             <div class="flex items-center justify-center space-x-3">
-                <div class="brand-c-logo !w-8 !h-8">
+                <div class="w-8 h-8 circle-avatar-tree border-2 border-white shadow-md flex-shrink-0">
                     <img src="images/celeste-profile.jpg" alt="Celeste Logo">
                 </div>
                 <span class="font-heading text-[#370F4D] font-bold tracking-widest text-sm">CELESTE UNIVERSO CONSCIENTE</span>
@@ -758,7 +741,7 @@
             <p class="text-[#370F4D] font-bold">
                 Espacio de autoconocimiento, transformación y reflexión.
             </p>
-            <p class="text-[#2D103F]/70 font-semibold text-[11px] pt-2">
+            <p class="text-[#2D103F]/70 font-semibold text-[11px] pt-1 sm:pt-2">
                 © 2026 Celeste Universo Consciente. Todos los derechos reservados.
             </p>
         </div>
