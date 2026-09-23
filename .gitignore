@@ -22,3 +22,6 @@ yarn-error.log*
 .vscode/
 *.swp
 *.tmp
+
+.vercel
+.env*
