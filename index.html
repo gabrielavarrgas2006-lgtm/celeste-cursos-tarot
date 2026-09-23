@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <!-- Script de Restauración de Scroll en el Tope (Abre siempre en el encabezado principal) -->
+    <!-- Script de Restauración de Scroll en el Tope -->
     <script>
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
@@ -29,7 +29,7 @@
     <meta property="og:description" content="Espacio de autoconocimiento, transformación y reflexión. Cursos, talleres y acompañamiento holístico de Tarot.">
     <meta property="og:site_name" content="Celeste Universo Consciente">
 
-    <!-- SVG Favicon -->
+    <!-- SVG Favicon con Foto / Símbolo místico -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FDF0F6' stroke='%23370F4D' stroke-width='4'/><text x='50' y='64' font-family='Outfit, sans-serif' font-size='52' font-weight='bold' fill='%23370F4D' text-anchor='middle'>C</text></svg>">
 
     <!-- Google Fonts: Outfit (Titulares) & Plus Jakarta Sans (Cuerpo) -->
@@ -142,26 +142,26 @@
             box-shadow: 0 8px 20px rgba(55, 15, 77, 0.1);
         }
 
-        /* ETIQUETAS Y BADGES CON TEXTO MORADO OSCURO 100% VISIBLE (CERO LETRAS BLANCAS) */
-        .cute-pastel-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.45rem 1rem;
-            border-radius: 0.85rem;
-            background: linear-gradient(135deg, #FDF0F6 0%, #F4E2EF 50%, #E6D4F5 100%);
-            border: 1.5px solid #F0CDE2;
+        /* ETIQUETAS Y BADGES CON TEXTO MORADO OSCURO 100% VISIBLE (FORZADO INLINE E IMPERMEABLE) */
+        .badge-morado-oscuro {
             color: #370F4D !important;
-            font-weight: 800 !important;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            box-shadow: 0 3px 10px rgba(55, 15, 77, 0.08);
+            background-color: #FDF0F6 !important;
+            border: 2px solid #370F4D !important;
+            font-weight: 900 !important;
+            font-size: 0.75rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+            border-radius: 0.85rem !important;
+            padding: 0.45rem 1rem !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 0.4rem !important;
+            box-shadow: 0 3px 10px rgba(55, 15, 77, 0.1) !important;
         }
 
-        .cute-pastel-badge * {
+        .badge-morado-oscuro * {
             color: #370F4D !important;
-            font-weight: 800 !important;
+            font-weight: 900 !important;
         }
 
         .cute-pastel-icon {
@@ -315,10 +315,10 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
                 
-                <!-- Cute Pastel Badge con texto Morado Oscuro 100% visible -->
-                <div class="cute-pastel-badge inline-flex max-w-full">
-                    <i class="fa-solid fa-sparkles text-xs flex-shrink-0"></i>
-                    <span class="truncate sm:whitespace-normal">Espacio de autoconocimiento, transformación y reflexión</span>
+                <!-- Badge con texto Morado Oscuro 100% visible -->
+                <div style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important;" class="badge-morado-oscuro inline-flex max-w-full">
+                    <i class="fa-solid fa-sparkles text-xs flex-shrink-0" style="color: #370F4D !important;"></i>
+                    <span style="color: #370F4D !important;" class="truncate sm:whitespace-normal">Espacio de autoconocimiento, transformación y reflexión</span>
                 </div>
 
                 <h1 class="font-heading text-2xl sm:text-4xl lg:text-6xl font-extrabold text-[#370F4D] leading-tight">
@@ -386,9 +386,9 @@
 
                     <!-- Description & Bio Content -->
                     <div class="md:col-span-8 space-y-4">
-                        <div class="cute-pastel-badge inline-flex">
-                            <i class="fa-solid fa-sparkles"></i>
-                            <span>Acompañamiento Holístico</span>
+                        <div style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important;" class="badge-morado-oscuro inline-flex">
+                            <i class="fa-solid fa-sparkles" style="color: #370F4D !important;"></i>
+                            <span style="color: #370F4D !important;">Acompañamiento Holístico</span>
                         </div>
 
                         <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#370F4D]">
@@ -424,7 +424,9 @@
     <!-- METODOLOGIA SECTION -->
     <section id="metodo" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-14">
-            <span class="cute-pastel-badge">Enfoque Pedagógico</span>
+            <div style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important;" class="badge-morado-oscuro inline-flex">
+                <span style="color: #370F4D !important;">Enfoque Pedagógico</span>
+            </div>
             <h2 class="font-heading text-2xl sm:text-4xl font-bold text-[#370F4D]">Más que memorizar significados</h2>
             <div class="w-16 h-1 bg-[#370F4D] mx-auto rounded-full"></div>
             <p class="text-[#2D103F] text-sm sm:text-base font-bold leading-relaxed">
@@ -474,7 +476,9 @@
     <!-- CURSO DE TAROT SECTION -->
     <section id="cursos" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-14">
-            <span class="cute-pastel-badge">Formación Completa</span>
+            <div style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important;" class="badge-morado-oscuro inline-flex">
+                <span style="color: #370F4D !important;">Formación Completa</span>
+            </div>
             <h2 class="font-heading text-2xl sm:text-4xl font-bold text-[#370F4D]">Curso de Tarot</h2>
             <div class="w-16 h-1 bg-[#370F4D] mx-auto rounded-full"></div>
             <p class="text-[#2D103F] text-sm sm:text-base font-bold">
@@ -487,7 +491,7 @@
             <div class="panel-card p-6 sm:p-10 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-center mb-6">
-                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-extrabold text-xs uppercase tracking-wider shadow-sm">A tu ritmo</span>
+                        <span style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important;" class="badge-morado-oscuro">A tu ritmo</span>
                         <div class="cute-pastel-icon !w-9 !h-9 !text-sm">
                             <i class="fa-solid fa-video"></i>
                         </div>
@@ -514,13 +518,13 @@
                 </div>
             </div>
 
-            <!-- Modalidad 2: Personalizada (ETIQUETA EXCLUSIVO EN VIVO EN MORADO OSCURO 100% NÍTIDO) -->
+            <!-- Modalidad 2: Personalizada (ETIQUETA EXCLUSIVO EN VIVO EN MORADO OSCURO 100% IMPERMEABLE) -->
             <div class="panel-card p-6 sm:p-10 flex flex-col justify-between border-2 !border-[#370F4D]">
                 <div>
                     <div class="flex justify-between items-center mb-6">
-                        <!-- ETIQUETA MORADO OSCURO 100% VISIBLE SIN BLANCO -->
-                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-extrabold text-xs uppercase tracking-wider shadow-sm">
-                            Exclusivo en vivo
+                        <!-- ETIQUETA EXCLUSIVO EN VIVO CON ESTILO INLINE MORADO OSCURO INDESTRUCTIBLE -->
+                        <span style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important; font-size: 0.75rem !important; text-transform: uppercase !important; letter-spacing: 0.05em !important;" class="inline-block px-4 py-1.5 rounded-full shadow-sm">
+                            EXCLUSIVO EN VIVO
                         </span>
                         <div class="cute-pastel-icon !w-9 !h-9 !text-sm">
                             <i class="fa-solid fa-user-gear"></i>
@@ -553,7 +557,9 @@
     <!-- TALLERES DE TAROT SECTION -->
     <section id="talleres" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-14">
-            <span class="cute-pastel-badge">Especialización Puntual</span>
+            <div style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important;" class="badge-morado-oscuro inline-flex">
+                <span style="color: #370F4D !important;">Especialización Puntual</span>
+            </div>
             <h2 class="font-heading text-2xl sm:text-4xl font-bold text-[#370F4D]">Talleres de Tarot</h2>
             <div class="w-16 h-1 bg-[#370F4D] mx-auto rounded-full"></div>
             <p class="text-[#2D103F] text-sm sm:text-base font-bold">
@@ -565,7 +571,7 @@
             <!-- Nivel 1 -->
             <div class="panel-card p-6 sm:p-8">
                 <div class="flex justify-between items-center mb-6">
-                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-extrabold text-xs uppercase tracking-wider shadow-sm">Nivel 1</span>
+                    <span style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important;" class="badge-morado-oscuro">Nivel 1</span>
                     <div class="cute-pastel-icon !w-8 !h-8 !text-xs">
                         <i class="fa-solid fa-seedling"></i>
                     </div>
@@ -582,7 +588,7 @@
             <!-- Nivel 2 -->
             <div class="panel-card p-6 sm:p-8">
                 <div class="flex justify-between items-center mb-6">
-                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#FDF0F6] border border-[#F0CDE2] text-[#370F4D] font-extrabold text-xs uppercase tracking-wider shadow-sm">Nivel 2</span>
+                    <span style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important;" class="badge-morado-oscuro">Nivel 2</span>
                     <div class="cute-pastel-icon !w-8 !h-8 !text-xs">
                         <i class="fa-solid fa-fire"></i>
                     </div>
@@ -634,9 +640,9 @@
             <div class="panel-card p-6 sm:p-12 border-2 border-[#F0CDE2] relative overflow-hidden">
                 
                 <div class="text-center max-w-2xl mx-auto space-y-4 mb-10 sm:mb-12">
-                    <div class="cute-pastel-badge inline-flex">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Admisión y Pagos Seguros</span>
+                    <div style="color: #370F4D !important; background-color: #FDF0F6 !important; border: 2px solid #370F4D !important; font-weight: 900 !important;" class="badge-morado-oscuro inline-flex">
+                        <i class="fa-solid fa-shield-halved" style="color: #370F4D !important;"></i>
+                        <span style="color: #370F4D !important;">Admisión y Pagos Seguros</span>
                     </div>
                     <h2 class="font-heading text-2xl sm:text-4xl font-bold text-[#370F4D]">Inversión y Medios de Pago</h2>
                     <div class="w-16 h-1 bg-[#370F4D] mx-auto rounded-full"></div>
