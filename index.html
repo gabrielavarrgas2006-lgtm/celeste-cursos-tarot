@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Celeste Universo Consciente | Espacio de Autoconocimiento, Transformación y Tarot</title>
+    <meta name="title" content="Celeste Universo Consciente | Espacio de Autoconocimiento, Transformación y Tarot">
+    <meta name="description" content="Espacio de autoconocimiento, transformación y reflexión. Cursos y talleres de Tarot evolutivo y predictivo, acompañamiento holístico y formación personalizada.">
+    <meta name="keywords" content="Celeste Universo Consciente, Tarot, Cursos de Tarot, Talleres de Tarot, Acompañamiento Holístico, Tarot Evolutivo, Rider Waite Smith, Autoconocimiento">
+    <meta name="author" content="Celeste Universo Consciente">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Celeste Universo Consciente | Espacio de Autoconocimiento">
+    <meta property="og:description" content="Espacio de autoconocimiento, transformación y reflexión. Cursos, talleres y acompañamiento holístico de Tarot.">
+    <meta property="og:site_name" content="Celeste Universo Consciente">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Celeste Universo Consciente | Espacio de Autoconocimiento">
+    <meta property="twitter:description" content="Espacio de autoconocimiento, transformación y reflexión. Cursos, talleres y acompañamiento holístico de Tarot.">
+
+    <!-- SVG Favicon con Monograma C -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23120E1F' stroke='%23C084FC' stroke-width='4'/><text x='50' y='64' font-family='Georgia, serif' font-size='52' font-weight='bold' fill='%23E9D5FF' text-anchor='middle'>C</text></svg>">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lilacBase: '#120E1F',    /* Fondo profundo inmersivo */
+                        lilacCard: '#1A142B',    /* Tono elegante para tarjetas */
+                        lilacAccent: '#261D3D',  /* Tono secundario para contenedores */
+                        lilacBorder: '#3F3160',  /* Bordes limpios */
+                        neonSoft: '#D8B4FE',     /* Resplandor pastel sutil */
+                        textMain: '#FFFFFF',     /* Texto principal puro */
+                        textMuted: '#D1C4E9',    /* Texto secundario claro */
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #120E1F;
+            color: #FFFFFF;
+            overflow-x: hidden;
+            font-weight: 600;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', Georgia, serif;
+            font-weight: 700;
+        }
+        /* Neon title glow */
+        .neon-title {
+            color: #E9D5FF;
+            text-shadow: 0 0 20px rgba(192, 132, 252, 0.4);
+        }
+        /* Panel container styles */
+        .panel-card {
+            background-color: #1A142B;
+            border: 1px solid #3F3160;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .panel-card:hover {
+            border-color: #C084FC;
+            box-shadow: 0 15px 40px rgba(192, 132, 252, 0.15);
+        }
+        .payment-method-card {
+            background-color: #120E1F;
+            border: 1px solid #3F3160;
+            transition: all 0.3s ease;
+        }
+        .payment-method-card:hover {
+            border-color: #C084FC;
+            transform: translateY(-2px);
+        }
+        /* Monograma C elegante */
+        .brand-c-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #261D3D 0%, #1A142B 100%);
+            border: 1px solid #C084FC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', Georgia, serif;
+            font-weight: 800;
+            color: #E9D5FF;
+            box-shadow: 0 0 15px rgba(192, 132, 252, 0.25);
+        }
+        .brand-c-hero {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #261D3D 0%, #120E1F 100%);
+            border: 2px solid #C084FC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #E9D5FF;
+            box-shadow: 0 0 25px rgba(192, 132, 252, 0.35);
+            margin: 0 auto 1rem auto;
+        }
+        /* Circular Profile Photo Wrapper */
+        .profile-photo-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid #C084FC;
+            box-shadow: 0 0 30px rgba(192, 132, 252, 0.3), inset 0 0 15px rgba(0,0,0,0.5);
+            overflow: hidden;
+            background: linear-gradient(135deg, #261D3D 0%, #120E1F 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 0 auto;
+        }
+        .profile-photo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-lilacBase text-textMain selection:bg-purple-500 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#120E1F]/95 backdrop-blur-md border-b border-[#3F3160]">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="brand-c-logo text-xl">
+                    C
+                </div>
+                <div>
+                    <span class="font-serif text-lg font-bold tracking-wider text-white block leading-tight">CELESTE</span>
+                    <span class="text-[10px] uppercase tracking-widest text-purple-300 font-bold block">Universo Consciente</span>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-bold text-textMuted">
+                <a href="#nosotros" class="hover:text-white transition-colors">Celeste</a>
+                <a href="#metodo" class="hover:text-white transition-colors">Método</a>
+                <a href="#cursos" class="hover:text-white transition-colors">Cursos</a>
+                <a href="#talleres" class="hover:text-white transition-colors">Talleres</a>
+                <a href="#pagos" class="hover:text-white transition-colors">Inversión y Pagos</a>
+            </div>
+
+            <div class="hidden sm:block">
+                <a href="#pagos" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm transition-all shadow-md hover:shadow-purple-500/25">
+                    Inscripción
+                </a>
+            </div>
+
+            <button id="menu-btn" aria-label="Abrir menú" class="md:hidden text-textMuted p-2 focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1A142B] border-b border-[#3F3160] px-6 py-6 space-y-4 font-bold">
+            <a href="#nosotros" class="block text-sm text-textMuted hover:text-white mobile-link">Celeste</a>
+            <a href="#metodo" class="block text-sm text-textMuted hover:text-white mobile-link">Método</a>
+            <a href="#cursos" class="block text-sm text-textMuted hover:text-white mobile-link">Cursos</a>
+            <a href="#talleres" class="block text-sm text-textMuted hover:text-white mobile-link">Talleres</a>
+            <a href="#pagos" class="block text-sm text-textMuted hover:text-white mobile-link">Inversión y Pagos</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION WITH BRAND LOGO "C" -->
+    <header class="pt-40 pb-20 md:pt-48 md:pb-28 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                
+                <!-- Tagline Badge with Monogram Header -->
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-[#261D3D] border border-[#3F3160] text-neonSoft text-xs font-bold tracking-wide">
+                    <i class="fa-solid fa-sparkles text-xs text-purple-400"></i>
+                    <span>Espacio de autoconocimiento, transformación y reflexión</span>
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    CELESTE <br class="hidden sm:inline" /><span class="neon-title">UNIVERSO CONSCIENTE</span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-textMuted font-bold max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Formaciones y talleres de Tarot evolutivo y predictivo. Aprendé a comprender el lenguaje sagrado de los arcanos a través de su simbología, elementos y relaciones.
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#cursos" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-center transition-all shadow-lg hover:shadow-purple-500/30">
+                        Ver Cursos y Talleres
+                    </a>
+                    <a href="#nosotros" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#261D3D] border border-[#3F3160] hover:border-purple-400 text-white font-bold text-center transition-all">
+                        Conocé la Propuesta
+                    </a>
+                </div>
+            </div>
+
+            <!-- Arcane Presentation Card -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="w-full max-w-sm panel-card rounded-3xl p-8 flex flex-col justify-between h-[440px] text-center relative overflow-hidden">
+                    <div class="flex justify-between items-center w-full">
+                        <span class="text-[11px] uppercase tracking-widest text-purple-300 font-bold">Arcano Mayor</span>
+                        <div class="w-8 h-8 rounded-lg bg-[#120E1F] border border-[#3F3160] flex items-center justify-center text-neonSoft text-sm">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                    </div>
+
+                    <div class="my-auto py-4">
+                        <div class="brand-c-hero">
+                            C
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white tracking-wide mt-2">La Sacerdotisa</h3>
+                        <p class="text-xs text-purple-300 font-bold mt-1">Intuición, Sabiduría y Simbología</p>
+                    </div>
+
+                    <div class="border-t border-[#3F3160] pt-4">
+                        <p class="text-xs text-textMuted font-bold tracking-wide">Desarrollá tu propia voz interpretativa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION: CELESTE - ACOMPAÑAMIENTO HOLÍSTICO (PROFILE PHOTO CONTAINER) -->
+    <section id="nosotros" class="py-24 bg-[#161122] border-y border-[#3F3160]">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="panel-card rounded-3xl p-8 sm:p-12 border-2 border-purple-500/40 relative overflow-hidden text-center sm:text-left">
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Circular Profile Photograph Container -->
+                    <div class="md:col-span-4 flex flex-col items-center justify-center space-y-3">
+                        <div class="profile-photo-circle">
+                            <img src="images/celeste-profile.jpg" 
+                                 alt="Celeste - Acompañamiento Holístico" 
+                                 id="profile-img"
+                                 onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><defs><linearGradient id=\'g\' x1=\'0%\' y1=\'0%\' x2=\'100%\' y2=\'100%\'><stop offset=\'0%\' stop-color=\'%23261D3D\'/><stop offset=\'100%\' stop-color=\'%23120E1F\'/></linearGradient></defs><rect width=\'100%\' height=\'100%\' fill=\'url(%23g)\'/><circle cx=\'100\' cy='100\' r=\'90\' fill=\'none\' stroke=\'%23C084FC\' stroke-width=\'3\'/><text x=\'100\' y=\'120\' font-family=\'Georgia, serif\' font-size=\'90\' font-weight=\'bold\' fill=\'%23E9D5FF\' text-anchor=\'middle\'>C</text></svg>';">
+                        </div>
+                        <span class="text-xs uppercase tracking-widest text-purple-300 font-bold">Celeste</span>
+                    </div>
+
+                    <!-- Description & Bio Content -->
+                    <div class="md:col-span-8 space-y-4">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-lg bg-[#120E1F] border border-[#3F3160] text-purple-300 text-xs font-bold">
+                            <i class="fa-solid fa-sparkles text-purple-400"></i>
+                            <span>Acompañamiento Holístico</span>
+                        </div>
+
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white">
+                            Celeste — Acompañamiento Holístico
+                        </h2>
+
+                        <p class="text-textMuted text-sm sm:text-base font-bold leading-relaxed">
+                            Un espacio creado para brindarte herramientas de autoconocimiento, reflexión y transformación profunda a través de la sabiduría del Tarot y el enfoque holístico.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs font-bold text-textMuted">
+                            <div class="flex items-center space-x-3 bg-[#120E1F] p-3 rounded-xl border border-[#3F3160]">
+                                <i class="fa-solid fa-heart text-purple-400 text-base"></i>
+                                <span>Mirada evolutiva y humana</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-[#120E1F] p-3 rounded-xl border border-[#3F3160]">
+                                <i class="fa-solid fa-feather text-purple-400 text-base"></i>
+                                <span>Espacio seguro y empático</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- METODOLOGIA SECTION -->
+    <section id="metodo" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+            <span class="text-purple-400 text-xs uppercase tracking-widest font-bold">Enfoque Pedagógico</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Más que memorizar significados</h2>
+            <div class="w-16 h-1 bg-purple-500 mx-auto rounded-full"></div>
+            <p class="text-textMuted text-base font-bold leading-relaxed">
+                La propuesta es aprender a comprender el Tarot a través de su simbología, sus elementos y la relación entre las cartas para que logres tu propia voz interpretativa.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="panel-card rounded-3xl p-8 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#120E1F] border border-[#3F3160] flex items-center justify-center text-neonSoft text-xl mb-6">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Simbología y Estructura</h3>
+                    <p class="text-textMuted text-sm font-bold leading-relaxed">
+                        Conectá con la raíz de cada arcano comprendiendo su lenguaje visual, sus elementos y la interacción profunda en cada tirada.
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel-card rounded-3xl p-8 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#120E1F] border border-[#3F3160] flex items-center justify-center text-neonSoft text-xl mb-6">
+                        <i class="fa-solid fa-signs-post"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Observación de Procesos</h3>
+                    <p class="text-textMuted text-sm font-bold leading-relaxed">
+                        No solo respondemos qué va a pasar. Utilizamos el Tarot para observar diferentes perspectivas, comprender procesos y reconocer patrones vitales.
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel-card rounded-3xl p-8 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#120E1F] border border-[#3F3160] flex items-center justify-center text-neonSoft text-xl mb-6">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Práctica y Seguridad</h3>
+                    <p class="text-textMuted text-sm font-bold leading-relaxed">
+                        Un espacio pensado tanto para principiantes absolutos como para quienes buscan ordenar, reforzar y elevar la calidad de sus lecturas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURSO DE TAROT SECTION -->
+    <section id="cursos" class="py-24 bg-[#161122] border-y border-[#3F3160]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-purple-400 text-xs uppercase tracking-widest font-bold">Formación Completa</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Curso de Tarot</h2>
+                <div class="w-16 h-1 bg-purple-500 mx-auto rounded-full"></div>
+                <p class="text-textMuted text-base font-bold">
+                    Duración total: <span class="text-white font-bold">3 meses</span>. Dos modalidades adaptadas a tus tiempos y objetivos.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Modalidad 1: Grabada -->
+                <div class="panel-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-xs uppercase tracking-wider px-3 py-1.5 rounded-lg bg-[#120E1F] text-neonSoft border border-[#3F3160] font-bold">A tu ritmo</span>
+                            <i class="fa-solid fa-video text-neonSoft text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-3">Modalidad 100% Grabada</h3>
+                        <p class="text-textMuted text-sm font-bold mb-6 leading-relaxed">
+                            Accedés al contenido completo para estudiar a tu tiempo y a tu ritmo, con acompañamiento personalizado.
+                        </p>
+                        <ul class="space-y-4 text-sm text-textMuted font-bold mb-8">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-purple-400 mr-3 mt-1"></i>
+                                <span>Acceso ilimitado al contenido teórico y práctico.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-purple-400 mr-3 mt-1"></i>
+                                <span><strong class="text-white">2 clases individuales</strong> de evaluación y práctica para resolver dudas y acompañar tu evolución.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#pagos" class="w-full block text-center py-4 rounded-xl border border-purple-500 text-white font-bold hover:bg-purple-600 transition-all text-sm">
+                            Consultar Costos y Disponibilidad
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Modalidad 2: Personalizada -->
+                <div class="panel-card rounded-3xl p-8 sm:p-10 flex flex-col justify-between border-2 border-purple-500/60">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-xs uppercase tracking-wider px-3 py-1.5 rounded-lg bg-purple-600 text-white font-bold">Exclusivo en vivo</span>
+                            <i class="fa-solid fa-user-gear text-neonSoft text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-3">Modalidad 100% Personalizada</h3>
+                        <p class="text-textMuted text-sm font-bold mb-6 leading-relaxed">
+                            Clases individuales en vivo, totalmente adaptadas a tu nivel actual y a tus necesidades específicas.
+                        </p>
+                        <ul class="space-y-4 text-sm text-textMuted font-bold mb-8">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-purple-400 mr-3 mt-1"></i>
+                                <span>Encuentros individuales con seguimiento directo.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-purple-400 mr-3 mt-1"></i>
+                                <span>Ritmo de avance exclusivo según tus metas e intereses.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#pagos" class="w-full block text-center py-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold transition-all text-sm shadow-md">
+                            Consultar Costos y Disponibilidad
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TALLERES DE TAROT SECTION -->
+    <section id="talleres" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+            <span class="text-purple-400 text-xs uppercase tracking-widest font-bold">Especialización Puntual</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Talleres de Tarot</h2>
+            <div class="w-16 h-1 bg-purple-500 mx-auto rounded-full"></div>
+            <p class="text-textMuted text-base font-bold">
+                Clases 100% personalizadas para trabajar aquello que necesitás reforzar o profundizar.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            <!-- Nivel 1 -->
+            <div class="panel-card rounded-3xl p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-xs uppercase tracking-wider px-3 py-1.5 rounded-lg bg-[#120E1F] text-neonSoft border border-[#3F3160] font-bold">Nivel 1</span>
+                    <i class="fa-solid fa-seedling text-neonSoft text-lg"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-white mb-3">Nivel Inicial</h3>
+                <p class="text-textMuted text-sm font-bold leading-relaxed mb-6">
+                    Para quienes están comenzando a aprender Tarot y necesitan incorporar y ordenar las bases: estructura, arcanos, simbología, interpretación inicial y práctica.
+                </p>
+                <div class="text-xs text-purple-300 font-bold flex items-center">
+                    <i class="fa-solid fa-circle-check mr-2"></i> Clases 100% personalizadas
+                </div>
+            </div>
+
+            <!-- Nivel 2 -->
+            <div class="panel-card rounded-3xl p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-xs uppercase tracking-wider px-3 py-1.5 rounded-lg bg-[#120E1F] text-neonSoft border border-[#3F3160] font-bold">Nivel 2</span>
+                    <i class="fa-solid fa-fire text-neonSoft text-lg"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-white mb-3">Nivel Avanzado</h3>
+                <p class="text-textMuted text-sm font-bold leading-relaxed mb-6">
+                    Para quienes ya tienen conocimientos y buscan profundizar la interpretación, combinar cartas, mejorar sus lecturas y ganar mayor seguridad al interpretar una tirada.
+                </p>
+                <div class="text-xs text-purple-300 font-bold flex items-center">
+                    <i class="fa-solid fa-circle-check mr-2"></i> Clases 100% personalizadas
+                </div>
+            </div>
+        </div>
+
+        <!-- Packs de Clases -->
+        <div class="max-w-4xl mx-auto panel-card rounded-3xl p-8 sm:p-10 text-center border border-purple-500/50">
+            <h3 class="font-serif text-2xl font-bold text-white mb-3">Packs de Clases Modulares</h3>
+            <p class="text-textMuted text-sm font-bold max-w-xl mx-auto mb-6">
+                Clases individuales y personalizadas según tus objetivos específicos:
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <div class="px-6 py-3 rounded-xl bg-[#120E1F] border border-[#3F3160] text-white font-bold text-sm">
+                    Pack de 3 clases
+                </div>
+                <div class="px-6 py-3 rounded-xl bg-[#120E1F] border border-[#3F3160] text-white font-bold text-sm">
+                    Pack de 5 clases
+                </div>
+            </div>
+            <a href="#pagos" class="inline-block px-8 py-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm transition-all shadow-md">
+                Consultar Costos y Disponibilidad
+            </a>
+        </div>
+    </section>
+
+    <!-- QUOTE BANNER -->
+    <section class="py-20 text-center max-w-4xl mx-auto px-6">
+        <i class="fa-solid fa-quote-left text-purple-400 text-2xl mb-4 block"></i>
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white leading-relaxed mb-4">
+            "Aprender Tarot no es memorizar cartas. Es aprender a observar, relacionar, interpretar y desarrollar tu propia mirada."
+        </h3>
+        <div class="w-16 h-1 bg-purple-500 mx-auto rounded-full"></div>
+    </section>
+
+    <!-- ELITE PAYMENT & CONSULTATION SECTION -->
+    <section id="pagos" class="py-24 bg-[#161122] border-t border-[#3F3160]">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="panel-card rounded-3xl p-8 sm:p-12 border-2 border-purple-500/50 shadow-2xl relative overflow-hidden">
+                
+                <!-- Background ambient glow -->
+                <div class="absolute -top-24 -right-24 w-72 h-72 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-2xl mx-auto space-y-4 mb-12">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#120E1F] border border-[#3F3160] text-neonSoft text-xs font-bold tracking-wider">
+                        <i class="fa-solid fa-shield-halved text-purple-400"></i>
+                        <span>Admisión y Pagos Seguros</span>
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Inversión y Medios de Pago</h2>
+                    <div class="w-16 h-1 bg-purple-500 mx-auto rounded-full"></div>
+                    <p class="text-textMuted text-sm font-bold leading-relaxed">
+                        Gestionamos las inscripciones de forma personalizada para garantizarte el cupo y ofrecerte las facilidades de pago adaptadas a tu país de residencia.
+                    </p>
+                </div>
+
+                <!-- Payment Method Overview Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+                    <div class="payment-method-card rounded-2xl p-5 text-center">
+                        <div class="w-10 h-10 mx-auto mb-3 rounded-xl bg-[#261D3D] border border-[#3F3160] flex items-center justify-center text-neonSoft text-base">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h4 class="font-serif text-sm font-bold text-white mb-1">Transferencia / Depósito</h4>
+                        <p class="text-xs text-textMuted font-bold">CBU / Alias bancario directo</p>
+                    </div>
+
+                    <div class="payment-method-card rounded-2xl p-5 text-center">
+                        <div class="w-10 h-10 mx-auto mb-3 rounded-xl bg-[#261D3D] border border-[#3F3160] flex items-center justify-center text-neonSoft text-base">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <h4 class="font-serif text-sm font-bold text-white mb-1">Tarjetas de Crédito</h4>
+                        <p class="text-xs text-textMuted font-bold">Cuotas y planes habilitados</p>
+                    </div>
+
+                    <div class="payment-method-card rounded-2xl p-5 text-center">
+                        <div class="w-10 h-10 mx-auto mb-3 rounded-xl bg-[#261D3D] border border-[#3F3160] flex items-center justify-center text-neonSoft text-base">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h4 class="font-serif text-sm font-bold text-white mb-1">Pagos Internacionales</h4>
+                        <p class="text-xs text-textMuted font-bold">PayPal & plataformas externas</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Consultation Form -->
+                <div class="bg-[#120E1F] border border-[#3F3160] rounded-2xl p-6 sm:p-8 space-y-6">
+                    <div class="border-b border-[#3F3160] pb-4">
+                        <h3 class="font-serif text-lg font-bold text-white">Solicitar Presupuesto y Link de Pago</h3>
+                        <p class="text-xs text-textMuted font-bold mt-1">Completá el formulario para recibir atención inmediata de nuestro equipo vía WhatsApp.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-purple-300 font-bold mb-2">Tu Nombre Completo</label>
+                            <input type="text" id="user-name" placeholder="Ej. Valeria Gómez" class="w-full bg-[#1A142B] border border-[#3F3160] rounded-xl px-4 py-3.5 text-white font-bold placeholder-purple-400/60 text-sm focus:outline-none focus:border-purple-400 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-purple-300 font-bold mb-2">Propuesta de Interés</label>
+                            <select id="interest-option" class="w-full bg-[#1A142B] border border-[#3F3160] rounded-xl px-4 py-3.5 text-white font-bold text-sm focus:outline-none focus:border-purple-400 transition-colors">
+                                <option value="Curso de Tarot - Modalidad 100% Grabada">Curso de Tarot — Modalidad 100% Grabada</option>
+                                <option value="Curso de Tarot - Modalidad 100% Personalizada">Curso de Tarot — Modalidad 100% Personalizada</option>
+                                <option value="Taller de Tarot - Nivel 1 (Inicial)">Taller de Tarot — Nivel 1 (Inicial)</option>
+                                <option value="Taller de Tarot - Nivel 2 (Avanzado)">Taller de Tarot — Nivel 2 (Avanzado)</option>
+                                <option value="Pack de Clases (3 o 5 clases)">Pack de Clases (3 o 5 clases)</option>
+                                <option value="Acompañamiento Holístico Celeste">Acompañamiento Holístico Celeste</option>
+                                <option value="Consulta General sobre Costos y Medios de Pago">Consulta General sobre Costos y Medios de Pago</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-purple-300 font-bold mb-2">Comentarios o Preguntas (Opcional)</label>
+                        <textarea id="user-message" rows="3" placeholder="Hola, me gustaría recibir información sobre aranceles y medios de pago..." class="w-full bg-[#1A142B] border border-[#3F3160] rounded-xl px-4 py-3.5 text-white font-bold placeholder-purple-400/60 text-sm focus:outline-none focus:border-purple-400 transition-colors"></textarea>
+                    </div>
+
+                    <div class="pt-2">
+                        <button id="whatsapp-btn" type="button" class="w-full py-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-base flex items-center justify-center space-x-3 transition-all shadow-lg cursor-pointer">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Continuar por WhatsApp con Celeste Universo</span>
+                        </button>
+                        <p class="text-center text-xs text-textMuted font-bold mt-3">
+                            <i class="fa-solid fa-lock text-purple-400 mr-1"></i> Atención confidencial y asesoramiento personalizado sin compromiso.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#120E1F] border-t border-[#3F3160] py-12 text-center text-textMuted text-xs font-bold">
+        <div class="max-w-7xl mx-auto px-6 space-y-4">
+            <div class="flex items-center justify-center space-x-3">
+                <div class="brand-c-logo text-sm w-9 h-9 rounded-lg">
+                    C
+                </div>
+                <span class="font-serif text-white font-bold tracking-widest text-sm">CELESTE UNIVERSO CONSCIENTE</span>
+            </div>
+            <p class="text-purple-300 font-bold">
+                Espacio de autoconocimiento, transformación y reflexión.
+            </p>
+            <p class="text-textMuted/70 font-normal text-[11px] pt-2">
+                © 2026 Celeste Universo Consciente. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT HANDLERS -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // WhatsApp consultation handler
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', () => {
+                const nameInput = document.getElementById('user-name').value.trim();
+                const interestSelect = document.getElementById('interest-option').value;
+                const messageInput = document.getElementById('user-message').value.trim();
+
+                const phoneNumber = "5491100000000"; // Número de contacto directo
+
+                let text = "Hola! Mi nombre es " + (nameInput || "interesado/a") + ". Me comunico desde la web de Celeste Universo Consciente para recibir información sobre: *" + interestSelect + "*.";
+                if (messageInput) {
+                    text += "\nComentario: " + messageInput;
+                }
+
+                const encodedText = encodeURIComponent(text);
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+                window.open(whatsappURL, '_blank');
+            });
+        }
+    </script>
+
+</body>
+</html>

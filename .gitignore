@@ -1,0 +1,24 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Node dependencies (if added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Vercel deployment directory
+.vercel
+
+# Temporary and editor files
+.idea/
+.vscode/
+*.swp
+*.tmp
