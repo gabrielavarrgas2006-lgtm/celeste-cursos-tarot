@@ -713,13 +713,14 @@
                         <textarea id="user-message" rows="3" placeholder="Hola, me gustaría recibir información sobre aranceles y medios de pago..." class="w-full bg-[#FAF0F7] border border-[#F3D0E3] rounded-xl px-4 py-3.5 text-[#370F4D] font-bold placeholder-[#2D103F]/50 text-sm focus:outline-none focus:border-[#370F4D] transition-colors"></textarea>
                     </div>
 
-                    <div class="pt-2">
-                        <button id="whatsapp-btn" type="button" class="w-full py-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-base flex items-center justify-center space-x-3 transition-all shadow-md cursor-pointer">
-                            <i class="fa-brands fa-whatsapp text-2xl"></i>
-                            <span>Continuar por WhatsApp con Celeste Universo</span>
+                    <div class="pt-3">
+                        <button id="whatsapp-btn" type="button" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#25D366] to-[#1EAE53] hover:from-[#20ba59] hover:to-[#199947] text-white font-heading font-extrabold text-base flex items-center justify-center space-x-3 transition-all shadow-lg hover:shadow-green-500/30 cursor-pointer active:scale-[0.99]">
+                            <i class="fa-brands fa-whatsapp text-2xl flex-shrink-0"></i>
+                            <span class="tracking-wide">Consultar por WhatsApp</span>
                         </button>
-                        <p class="text-center text-xs text-[#2D103F] font-bold mt-3">
-                            <i class="fa-solid fa-lock text-[#370F4D] mr-1"></i> Atención confidencial y asesoramiento personalizado sin compromiso.
+                        <p class="text-center text-xs text-[#2D103F] font-bold mt-3.5 flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-lock text-[#370F4D]"></i>
+                            <span>Atención confidencial y asesoramiento personalizado</span>
                         </p>
                     </div>
                 </div>
@@ -727,6 +728,15 @@
             </div>
         </div>
     </section>
+
+    <!-- FLOATING WHATSAPP BUTTON (Acceso Rápido Flotante) -->
+    <a href="https://wa.me/5491100000000?text=Hola!%20Me%20comunico%20desde%20la%20web%20de%20Celeste%20Universo%20Consciente" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp" 
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-[#25D366] to-[#1EAE53] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 transition-transform border-2 border-white">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <!-- FOOTER -->
     <footer class="bg-[#EAE0F5] border-t border-[#F3D0E3] py-12 text-center text-[#2D103F] text-xs font-bold shadow-inner">
