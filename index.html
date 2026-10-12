@@ -6,15 +6,35 @@
     <meta name="color-scheme" content="only light">
     <meta name="theme-color" content="#F3E8FA">
     
-    <!-- Script de Restauración de Scroll en el Tope -->
+    <!-- Script de Garantía de Apertura en el Tope (Inicio Siempre) -->
     <script>
+        // Desactiva la restauración de scroll automático de sesiones previas
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
+
+        // Si la página se abre con un ancla residual (#nosotros, etc.) guardada en el historial o autocompletado,
+        // se limpia de inmediato para asegurar que abra siempre en el Hero / encabezado principal.
+        if (window.location.hash) {
+            try {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            } catch (e) {}
+        }
+
+        // Forzar scroll al inicio
         window.scrollTo(0, 0);
-        document.addEventListener("DOMContentLoaded", function() {
-            window.scrollTo(0, 0);
-        });
+
+        function resetScrollToTop() {
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            if (document.documentElement) document.documentElement.scrollTop = 0;
+            if (document.body) document.body.scrollTop = 0;
+        }
+
+        document.addEventListener("DOMContentLoaded", resetScrollToTop);
+        window.addEventListener("load", resetScrollToTop);
+        window.addEventListener("pageshow", resetScrollToTop);
+        setTimeout(resetScrollToTop, 50);
+        setTimeout(resetScrollToTop, 200);
     </script>
 
     <!-- Primary Meta Tags -->
